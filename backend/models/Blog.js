@@ -19,7 +19,7 @@ const blogSchema = new Schema({
     // type: String,
     //connecting the user to the blog
     type: mongoose.Types.ObjectId,
-    ref:"User",
+    ref: "User",
     required: true,
   },
 });

@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import blogRouter from "./routes/blog-routes";
 import router from "./routes/user-routes";
+import cors from "cors";
 
 const app = express();
 
@@ -10,6 +11,7 @@ const app = express();
 //     res.send('Hello World')
 // })
 
+app.use(cors());
 //to show the type of file the database is receiving
 app.use(express.json());
 app.use("/api/user", router);
